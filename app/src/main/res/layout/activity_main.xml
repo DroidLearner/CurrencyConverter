@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.project.shrey.currencyconverter.MainActivity" >
+
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Base Currency: USD"
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Foreign Currency: INR"
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amount: "
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <EditText
+                                    android:id="@+id/amt1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="in dollars"
+                                    android:textSize="18sp"
+                                    android:inputType="text"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/res1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Result: "
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <Button
+                                android:id="@+id/con1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Convert"/>
+
+                            <Button
+                                android:id="@+id/rst1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Reset"
+                                android:onClick="reset"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Base Currency: INR"
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Foreign Currency: USD"
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amount: "
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <EditText
+                                    android:id="@+id/amt2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="in rupees"
+                                    android:textSize="18sp"
+                                    android:inputType="text"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/res2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Result: "
+                                android:textSize="18sp"
+                                android:textColor="#000000"/>
+
+                            <Button
+                                android:id="@+id/con2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Convert"/>
+
+                            <Button
+                                android:id="@+id/rst2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Reset"
+                                android:onClick="reset"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
